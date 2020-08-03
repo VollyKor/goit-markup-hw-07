@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    align-items: center;
+  
+    color: $primary-black-color;
+
+    &-list {
+
+        & > li:not(:last-child) {
+            margin-right: 50px;
+        }
+
+    }
+}
+
+  .nav-link {
+    display: block;
+  
+    padding-top: 32px;
+    padding-bottom: 32px;
+  
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  
+    color: $primary-black-color;
+    fill: none;
+  
+    transition: color 250ms $time-function;
+
+    &:hover, &:focus {
+        color: $secondary-color;
+        fill: $secondary-color;
+    }
+  }

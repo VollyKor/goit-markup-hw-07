@@ -1,0 +1,73 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    color: $primary-grey-color;
+  
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  
+    letter-spacing: 0.03em;
+  }
+  
+  h1,
+  h2,
+  h3,
+  p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  button,
+  address {
+    font-family: inherit;
+    font-style: normal;
+  }
+  
+  ul,
+  button,
+  input {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+    padding: 0px;
+  }
+  
+  a {
+    /* color: #000; */
+    font-family: inherit;
+    text-decoration: none;
+  }
+  
+  .vertical-paddings {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  
+  .flex-box,
+  .nav-list {
+    display: flex;
+    align-items: center;
+  }
+  
+  svg {
+    display: block;
+  }
+  
+  address {
+    margin-left: auto;
+  }
+  
+  .active-link {
+    color: $secondary-color;
+    fill: $secondary-color;
+  }
