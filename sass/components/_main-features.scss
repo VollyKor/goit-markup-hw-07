@@ -1,0 +1,52 @@
+  .features {
+@extend %container;
+@extend %vertical-paddings;
+
+    &-title {
+        display: none;
+  }
+
+    &-item:not(:last-child) {
+        margin-right: 30px;
+  }
+  
+    &-list {
+      @extend %flex-box;
+  }
+
+    &-subtitle {
+        margin-bottom: 10px;
+    
+        color: $primary-black-color;
+    
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+  }
+  
+    &-subtitle::before {
+        content: "";
+        display: block;
+    
+        width: 270px;
+        height: 120px;
+    
+        background-color: $primary-background-color;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 4px;
+        margin-bottom: 30px;
+  }
+}
+
+$icons: "antenna", "clock" , "diagram" , "astronaut";
+
+@each $icon-name in $icons {
+
+    .icon-#{$icon-name}::before {
+        content: "";
+        background-image: url(../../images/icon-#{$icon-name}.svg);
+    }
+}
+

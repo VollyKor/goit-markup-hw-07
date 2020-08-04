@@ -313,11 +313,6 @@ address {
 }
 
 /* Features */
-
-.specialization {
-  padding-bottom: 94px;
-}
-
 .section-title,
 .specialization-title {
   margin-bottom: 50px;
@@ -387,7 +382,7 @@ address {
   content: "";
   background-image: url(../images/icon-astronaut.svg);
 }
-
+/* 
 .features-link {
   background-color: grey;
   color: var(--primary-white-color);
@@ -398,9 +393,11 @@ address {
 
   text-align: center;
   text-transform: uppercase;
-}
+} */
 
 /* Чем мы занимаемся */
+
+
 
 .specialization-title {
   margin-bottom: 50px;
@@ -624,7 +621,9 @@ footer > .container {
 .footer-social {
   margin-right: 94px;
 }
-
+.footer-social-link {
+  padding: 12px;
+}
 .footer-social > p {
   margin-bottom: 20px;
 }

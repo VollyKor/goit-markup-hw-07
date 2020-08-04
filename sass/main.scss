@@ -6,9 +6,24 @@
 @import "./variables/variables";
 
 // Утилиты
+@import "./utils/placeholders";
 @import "./utils/common";
 @import "./utils/visually-hidden";
 
 // Компоненты
+
+// Header
+@import "./components/header";
 @import "./components/header-logo";
 @import "./components/header-nav";
+@import "./components/header-address";
+
+// Main
+@import "./components/main-hero";
+@import "./components/main-features";
+@import "./components/main-specialization";
+@import "./components/main-team"
+
+// Footer
+
+// Modal

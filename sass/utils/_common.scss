@@ -43,31 +43,10 @@ html {
   }
   
   a {
-    /* color: #000; */
     font-family: inherit;
     text-decoration: none;
   }
   
-  .vertical-paddings {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-  
-  .flex-box,
-  .nav-list {
-    display: flex;
-    align-items: center;
-  }
-  
   svg {
     display: block;
-  }
-  
-  address {
-    margin-left: auto;
-  }
-  
-  .active-link {
-    color: $secondary-color;
-    fill: $secondary-color;
   }

@@ -17,8 +17,8 @@
 
   <body>
     <!-- Шапка -->
-    <header class="flex-box container">
-      <nav class="nav">
+    <header class="header">
+      <nav class="header-nav">
         <a href="./index.html" class="header-logo" aria-label="Логотип">
           <span>
             Web
@@ -43,7 +43,7 @@
           </li>
         </ul>
       </nav>
-      <address class="flex-box">
+      <address class="header-address">
         <ul class="address-list">
           <li>
             <a class="address-item" href="mailto:info@devstudio.com">
@@ -80,9 +80,9 @@
       </section>
 
       <!-- Особенности -->
-      <section class="container vertical-paddings">
+      <section class="features">
         <h2 class="features-title">Особенности</h2>
-        <ul class="flex-box">
+        <ul class="features-list">
           <li class="features-item">
             <h3 class="features-subtitle icon-antenna">
               Внимание к деталям
@@ -119,11 +119,11 @@
       </section>
 
       <!-- Чем мы занимаемся -->
-      <section class="container specialization">
+      <section class="specialization">
         <h2 class="specialization-title">Чем мы занимаемся</h2>
         <!-- как я понял, эти картинки, это ссылки на страницу порфолио с фильтром по категориям -->
         <ul class="specialization-list">
-          <li>
+          <li class="specialization-item">
             <a class="specialization-link" href="">
               <img
                 src="./images/desktop-applications.jpg"
@@ -131,10 +131,10 @@
                 width="370"
                 height="294"
               />
-              <span class="spec-desc">Десктопные приложения</span>
+              <span class="specialization-desc">Десктопные приложения</span>
             </a>
           </li>
-          <li>
+          <li class="specialization-item">
             <a class="specialization-link" href="">
               <img
                 src="./images/mobile-applications.jpg"
@@ -142,10 +142,10 @@
                 width="370"
                 height="294"
               />
-              <span class="spec-desc">Мобильные приложения</span>
+              <span class="specialization-desc">Мобильные приложения</span>
             </a>
           </li>
-          <li>
+          <li class="specialization-item">
             <a class="specialization-link" href="">
               <img
                 src="./images/design-solutions.jpg"
@@ -153,51 +153,51 @@
                 width="370"
                 height="294"
               />
-              <span class="spec-desc">Дизайнерские решения</span>
+              <span class="specialization-desc">Дизайнерские решения</span>
             </a>
           </li>
         </ul>
       </section>
 
       <!-- Наша команда -->
-      <section class="team vertical-paddings">
-        <div class="team-box container">
-          <h2 class="section-title">Наша команда</h2>
-          <ul class="team-list flex-box">
-            <li class="team-item team-card">
+      <section class="team">
+        <div class="team-section">
+          <h2 class="team-title">Наша команда</h2>
+          <ul class="team-list">
+            <li class="team-card">
               <img
                 src="./images/photo-nikolay-kucherenko.jpg"
                 alt="фото Николай Кучеренко"
                 width="270"
                 height="260"
               />
-              <div class="team-bio">
-                <h3 class="team-name">Николай Кучеренко</h3>
-                <p class="team-proffesion" lang="eu">Product Designer</p>
-                <ul class="bio-list flex-box">
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+              <div class="bio">
+                <h3 class="bio-name">Николай Кучеренко</h3>
+                <p class="bio-proffesion" lang="eu">Product Designer</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#linkedin"></use>
                       </svg>
@@ -207,40 +207,40 @@
               </div>
             </li>
 
-            <li class="team-item team-card">
+            <li class="team-card">
               <img
                 src="./images/photo-olga-ivanova.jpg"
                 alt="фото Ольга Иванова"
                 width="270"
                 height="260"
               />
-              <div class="team-bio">
-                <h3 class="team-name">Ольга Иванова</h3>
-                <p class="team-proffesion" lang="eu">Frontend Developer</p>
-                <ul class="bio-list flex-box">
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+              <div class="bio">
+                <h3 class="bio-name">Ольга Иванова</h3>
+                <p class="bio-proffesion" lang="eu">Frontend Developer</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#linkedin"></use>
                       </svg>
@@ -250,40 +250,40 @@
               </div>
             </li>
 
-            <li class="team-item team-card">
+            <li class="team-card">
               <img
                 src="./images/photo-andrey-shevchenko.jpg"
                 alt="фото Андрей Шевченко"
                 width="270"
                 height="260"
               />
-              <div class="team-bio">
-                <h3 class="team-name">Андрей Шевченко</h3>
-                <p class="team-proffesion" lang="eu">Marketing</p>
-                <ul class="bio-list flex-box">
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+              <div class="bio">
+                <h3 class="bio-name">Андрей Шевченко</h3>
+                <p class="bio-proffesion" lang="eu">Marketing</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#linkedin"></use>
                       </svg>
@@ -300,33 +300,33 @@
                 width="270"
                 height="260"
               />
-              <div class="team-bio">
-                <h3 class="team-name">Иван Николаев</h3>
-                <p class="team-proffesion" lang="eu">UI Designer</p>
-                <ul class="bio-list flex-box">
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+              <div class="bio">
+                <h3 class="bio-name">Иван Николаев</h3>
+                <p class="bio-proffesion" lang="eu">UI Designer</p>
+                <ul class="social-list">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="bio-item">
-                    <a class="bio-link" href="">
+                  <li class="social-item">
+                    <a class="social-link" href="">
                       <svg class="social-icon">
                         <use href="./images/sprite.svg#linkedin"></use>
                       </svg>
