@@ -24,11 +24,10 @@
     color: $primary-black-color;
     fill: none;
   
-    transition: color 250ms $time-function;
+   @include transition(color);
 
     &:hover, &:focus {
         color: $secondary-color;
-        fill: $secondary-color;
     }
   }
 

@@ -498,6 +498,7 @@ section.team {
 .bio-link {
   fill: var(--client-border-color);
   border-radius: 50%;
+  
   transition: 
     background-color 250ms var(--time-function),
     fill 250ms var(--time-function);

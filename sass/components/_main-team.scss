@@ -72,18 +72,16 @@
     &-link {
     display: block;
     padding: 12px;
-
-    fill: $client-border-color;
     border-radius: 50%;
 
-    transition: 
-        background-color 250ms $time-function,
-        fill 250ms $time-function;
-  
+    fill: $secondary-grey-color;
+
+    @include transition (fill, background-color);
+
         &:hover,
         &:focus {
+            fill: $primary-white-color;
             background-color: $secondary-color;
-            fill: $secondary-color;
         }
 
         &:not(:last-child) {
@@ -92,8 +90,6 @@
     }
 
     &-icon {
-    width: 20px;
-    height: 20px;
+        @extend %social-icon
     }
 }
-  

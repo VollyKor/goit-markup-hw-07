@@ -6,6 +6,7 @@
 @import "./variables/variables";
 
 // Утилиты
+@import "./utils/mixins";
 @import "./utils/placeholders";
 @import "./utils/common";
 @import "./utils/visually-hidden";
@@ -22,8 +23,10 @@
 @import "./components/main-hero";
 @import "./components/main-features";
 @import "./components/main-specialization";
-@import "./components/main-team"
+@import "./components/main-team";
+@import "./components/main-clients";
 
 // Footer
+
 
 // Modal

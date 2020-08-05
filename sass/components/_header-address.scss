@@ -30,7 +30,7 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  transition: color 250ms $time-function, fill 250ms $time-function;
+  @include transition (color, fill);
 
   & > svg {
     margin-right: 10px;

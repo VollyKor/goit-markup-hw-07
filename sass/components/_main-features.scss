@@ -46,7 +46,7 @@ $icons: "antenna", "clock" , "diagram" , "astronaut";
 
     .icon-#{$icon-name}::before {
         content: "";
-        background-image: url(../../images/icon-#{$icon-name}.svg);
+        background-image: url(./../images/icon-#{$icon-name}.svg);
     }
 }
 
