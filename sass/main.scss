@@ -10,12 +10,12 @@
 @import "./utils/placeholders";
 @import "./utils/common";
 @import "./utils/visually-hidden";
+@import "./utils/logo";
 
 // Компоненты
 
 // Header
-@import "./components/header";
-@import "./components/header-logo";
+@import "./components/header-wrapper";
 @import "./components/header-nav";
 @import "./components/header-address";
 
@@ -27,6 +27,11 @@
 @import "./components/main-clients";
 
 // Footer
-
+@import "./components/footer-wrapper";
+@import "./components/footer-contacts";
+@import "./components/footer-socials";
+@import "./components/footer-form-subscribe";
 
 // Modal
+@import "./components/modal";
+@import "./components/modal_is-hidden";

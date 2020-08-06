@@ -343,7 +343,7 @@
       <section class="clients">
         <h2 class="clients-title">Постоянные клиенты</h2>
         <ul class="clients-list">
-          <li class="client-item">
+          <li class="clients-item">
             <a href="" class="clients-link">
               <svg class="clients-icon" width="44px" height="49px">
                 <use href="./images/sprite.svg#logo-1"></use>
@@ -357,8 +357,8 @@
               </svg>
             </a>
           </li>
-          <li class="client-item">
-            <a href="" class="client-link">
+          <li class="clients-item">
+            <a href="" class="clients-link">
               <svg class="clients-icon" width="41px" height="43px">
                 <use href="./images/sprite.svg#logo-3"></use>
               </svg>
@@ -391,8 +391,8 @@
 
     <!-- футер -->
 
-    <footer class="footer-background">
-      <div class="container flex-box">
+    <footer class="footer">
+      <div class="footer-wrapper">
         <!-- контакты -->
         <div class="footer-contacts">
           <a
@@ -404,23 +404,23 @@
             Studio
           </a>
           <address class="footer-address">
-            <ul>
-              <li>
+            <ul class="footer-address-list">
+              <li class="footer-address-item">
                 <a
-                  class="footer-city"
+                  class="footer-address-link city "
                   href="https://goo.gl/maps/y2QhBPSRQjRxSZP76"
                   target="_blank"
                 >
                   г. Киев, пр-т Леси Украинки, 26
                 </a>
               </li>
-              <li>
-                <a class="footer-mail" href="mailto:info@example.com"
+              <li class="footer-address-item">
+                <a class="footer-address-link email" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
-              <li>
-                <a class="footer-phone" href="tel:+380991111111"
+              <li class="footer-address-item">
+                <a class="footer-address-link tel" href="tel:+380991111111"
                   >+38 099 111 11 11</a
                 >
               </li>
@@ -430,34 +430,32 @@
 
         <!-- Соц. ссылки -->
         <div class="footer-social">
-          <p>
-            <b class="footer-subtitle">Присоединяйтесь</b>
-          </p>
-          <ul class="flex-box">
-            <li class="social-item">
-              <a class="social-link" href="">
-                <svg class="social-icon">
+          <b class="footer-social-subtitle">Присоединяйтесь</b>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <svg class="footer-social-icon">
                   <use href="./images/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="social-item">
-              <a class="social-link" href="">
-                <svg class="social-icon">
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <svg class="footer-social-icon">
                   <use href="./images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="social-item">
-              <a class="social-link" href="">
-                <svg class="social-icon">
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <svg class="footer-social-icon">
                   <use href="./images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="social-item">
-              <a class="social-link" href="">
-                <svg class="social-icon">
+            <li class="footer-social-item">
+              <a class="footer-social-link" href="">
+                <svg class="footer-social-icon">
                   <use href="./images/sprite.svg#linkedin"></use>
                 </svg>
               </a>
@@ -466,13 +464,12 @@
         </div>
 
         <!-- Форма подпишись -->
-
         <form class="form-subscribe">
-          <span class="footer-subtitle">
+          <b class="form-subtitle">
             Подпишитесь на рассылку
-          </span>
-          <div class="subscribe-field flex-box">
-            <label class="">
+          </b>
+          <div class="form-wrapper">
+            <label class="form-lebel">
               <input
                 class="form-field"
                 type="text"
@@ -480,13 +477,10 @@
                 placeholder=" "
                 autocomplete="email"
               />
-              <span class="subscribe-tooltip">E-mail</span>
+              <span class="form-tooltip">E-mail</span>
             </label>
             <button class="subscribe-button" type="button">
-              <span>Подписаться</span>
-              <!-- <svg class="sign-icon">
-                  <use href="./images/sprite.svg#send"></use>
-                </svg> -->
+              <span>Подписаться</span> 
             </button>
           </div>
         </form>
@@ -495,16 +489,16 @@
 
     <!-- Бекдроп -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="modal-backdrop is-hidden" data-modal>
       <div class="modal-window">
-        <button class="close-modal" data-modal-close>
-          <svg class="close-icon">
+        <button class="modal-close" data-modal-close>
+          <svg class="modal-close-icon">
             <use href="./images/sprite.svg#close"></use>
           </svg>
         </button>
         
         <form class="form-order">
-          <p class="form-text">Оставьте свои данные, мы вам перезвоним</p>
+          <b class="form-text">Оставьте свои данные, мы вам перезвоним</b>
 
           <div class="flex-vertical" role="group">
             <label class="form-input">

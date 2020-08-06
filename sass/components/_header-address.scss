@@ -7,7 +7,6 @@
   @extend %flex-box;
   margin-left: auto;
 
-
   & > li + li {
     margin-left: 30px;
   }
@@ -30,7 +29,7 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  @include transition (color, fill);
+  @include transition(color, fill);
 
   & > svg {
     margin-right: 10px;
