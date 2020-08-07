@@ -50,3 +50,7 @@ html {
   svg {
     display: block;
   }
+
+  .border-buttom {
+    border-bottom: 1px solid $header-border-color;
+  }

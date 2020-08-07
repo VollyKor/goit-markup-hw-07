@@ -536,7 +536,7 @@ section.team {
 
   fill: var(--client-border-color);
 
-  border: 1px solid   var(--client-border-color);
+  border: 1px solid var(--client-border-color);
   border-radius: 4px;
 
   justify-content: center;

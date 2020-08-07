@@ -20,19 +20,12 @@
 @import "./components/common/header-address";
 
 // Main
-@import "./components/index.html/main-hero";
-@import "./components/index.html/main-features";
-@import "./components/index.html/main-specialization";
-@import "./components/index.html/main-team";
-@import "./components/index.html/main-clients";
+@import "./components/portfolio.html/gallery-wrapper";
+@import "./components/portfolio.html/gallery-buttons";
+@import "./components/portfolio.html/gallery-list";
 
 // Footer
 @import "./components/common/footer-wrapper";
 @import "./components/common/footer-contacts";
 @import "./components/common/footer-socials";
 @import "./components/common/footer-form-subscribe";
-
-// Modal
-@import "./components/index.html/modal";
-@import "./components/index.html/modal-form";
-@import "./components/index.html/modal_is-hidden";

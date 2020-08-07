@@ -227,6 +227,10 @@ svg {
   display: block;
 }
 
+.border-buttom {
+  border-bottom: 1px solid #ececec;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -798,6 +802,25 @@ svg {
   margin-bottom: 28px;
 }
 
+.form-comments {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-send {
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #2196f3;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+}
+
 .input-data {
   display: block;
   width: 448px;
@@ -805,6 +828,11 @@ svg {
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.input-data:focus, .input-data:not(:placeholder-shown) {
+  outline: none;
+  border-color: #2196f3;
 }
 
 .input-tooltip {
@@ -832,19 +860,9 @@ svg {
   fill: #212121;
 }
 
-.input-data:focus,
-.input-data:not(:placeholder-shown),
-.comments-data:focus,
-.comments-data:not(:placeholder-shown) {
-  outline: none;
-  border-color: #2196f3;
-}
-
-.input-tooltip,
-.input-icon,
-.comments-tooltip {
-  position: absolute;
-  z-index: 2;
+.input-data:focus ~ .input-icon,
+.input-data:not(:placeholder-shown) ~ .input-icon {
+  fill: #2196f3;
 }
 
 .input-data:focus ~ .input-icon {
@@ -859,32 +877,23 @@ svg {
   font-size: 12px;
 }
 
-.input-data:focus ~ .input-icon,
-.input-data:not(:placeholder-shown) ~ .input-icon {
-  fill: #2196f3;
-}
-
-.form-comments {
-  position: relative;
-  margin-bottom: 20px;
+.input-tooltip, .input-icon {
+  position: absolute;
+  z-index: 2;
 }
 
 .comments-data {
   width: 448px;
   height: 120px;
+  padding: 10px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
 }
 
-.comments-tooltip {
-  top: 12px;
-  left: 16px;
-  -webkit-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.comments-data:focus, .comments-data:not(:placeholder-shown) {
+  outline: none;
+  border-color: #2196f3;
 }
 
 .comments-data:focus ~ .comments-tooltip,
@@ -895,8 +904,16 @@ svg {
   font-size: 12px;
 }
 
-.license-agreement {
-  margin-bottom: 30px;
+.comments-tooltip {
+  top: 12px;
+  left: 16px;
+  position: absolute;
+  z-index: 2;
+  -webkit-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-icon {
@@ -914,37 +931,22 @@ svg {
   background-image: url(../images/icon-checkbox-checked.svg);
 }
 
-.agreement-description {
-  line-height: 1.15;
-  letter-spacing: 0.01em;
-}
-
-.agreement {
-  display: block;
-}
-
-.order-send {
-  width: 200px;
-  height: 50px;
-  color: #ffffff;
-  background-color: #2196f3;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  letter-spacing: 0.06em;
-  border: none;
-  border-radius: 4px;
+.license-agreement {
+  margin-bottom: 30px;
 }
 
 .license-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  /* identical to box height, or 171% */
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #2196f3;
+}
+
+.license-description {
+  line-height: 1.15;
+  letter-spacing: 0.01em;
 }
 
 .is-hidden {

@@ -4,11 +4,12 @@
     flex-direction: column;
   }
   
-  .form-order {
+.form {
+  &-order {
     margin-bottom: 40px;
   }
   
-  .form-text {
+  &-text {
     display: block;
     text-align: center;
     margin-top: 40px;
@@ -20,133 +21,17 @@
     color: $primary-black-color;
   }
   
-  .form-input {
+  &-input {
     position: relative;
     margin-bottom: 28px;
   }
-  
-  .input-data {
-    display: block;
-    width: 448px;
-    height: 40px;
-    padding-left: 42px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-  }
-  
-  .input-tooltip {
-    left: 42px;
-    top: 50%;
-    transform: translateY(-50%);
-  
-    font-size: 14px;
-    line-height: 1.07;
-    color: $primary-grey-color;
-  
-    @include transition(transform, color, font-size);
-  }
-  
-  .input-icon {
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
-  
-    width: 18px;
-    height: 18px;
-  
-    fill: $primary-black-color;
-  }
-  
-  .input-data:focus,
-  .input-data:not(:placeholder-shown),
-  .comments-data:focus,
-  .comments-data:not(:placeholder-shown) {
-    outline: none;
-    border-color: $secondary-color;
-  }
-  
-  .input-tooltip,
-  .input-icon,
-  .comments-tooltip {
-    position: absolute;
-    z-index: 2;
-  }
-  
-  .input-data:focus ~ .input-icon {
-    fill: $secondary-color;
-  }
-  
-  .input-data:focus ~ .input-tooltip,
-  .input-data:not(:placeholder-shown) ~ .input-tooltip {
-    transform: translate(-24px, -36px);
-    color: $secondary-color;
-    font-size: 12px;
-  }
-  
-  .input-data:focus ~ .input-icon,
-  .input-data:not(:placeholder-shown) ~ .input-icon {
-    fill: $secondary-color;
-  }
-  
-  .form-comments {
+
+  &-comments {
     position: relative;
     margin-bottom: 20px;
   }
-  
-  .comments-data {
-    width: 448px;
-    height: 120px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    resize: none;
-  }
-  
-  .comments-tooltip {
-    top: 12px;
-    left: 16px;
-  
-    @include transition(transform, color, font-size);
-  }
-  
-  .comments-data:focus ~ .comments-tooltip,
-  .comments-data:not(:placeholder-shown) ~ .comments-tooltip {
-    transform: translateY(-36px);
-    color: $secondary-color;
-    font-size: 12px;
-  }
-  
-  .checkbox-icon {
-    margin-right: 8px;
-    width: 16px;
-    height: 15px;
-    border-radius: 2px;
-    background-image: url(../images/icon-checkbox-unchecked.svg);
-    background-origin: content-box;
-    background-position: center;
-  }
-  
-  .checkbox:checked ~ .checkbox-icon {
-    background-color: $secondary-color;
-    background-image: url(../images/icon-checkbox-checked.svg);
-  }
-  
-  .license-agreement {
-    @extend %flex-box;
-    margin-bottom: 30px;
-  }
 
-  .agreement {
-    display: block;
-  }
- 
-  .agreement-description {
-    line-height: 1.15;
-    letter-spacing: 0.01em;
-  }
-  
-  
-  
-  .order-send {
+  &-send {
     width: 200px;
     height: 50px;
     color: $primary-white-color;
@@ -160,14 +45,138 @@
   
     border: none;
     border-radius: 4px;
+}
+}
+.input {
+  &-data {
+    display: block;
+    width: 448px;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      outline: none;
+      border-color: $secondary-color;
+    }
   }
   
-  .license-link {
+  &-tooltip {
+    left: 42px;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    font-size: 14px;
+    line-height: 1.07;
+    color: $primary-grey-color;
+  
+    @include transition(transform, color, font-size);
+  }
+  
+  &-icon {
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+  
+    width: 18px;
+    height: 18px;
+  
+    fill: $primary-black-color;
+  }
+
+  &-data:focus ~ &-icon,
+  &-data:not(:placeholder-shown) ~ &-icon {
+    fill: $secondary-color;
+  }
+
+  &-data:focus ~ &-icon {
+    fill: $secondary-color;
+  }
+
+  &-data:focus ~ &-tooltip,
+  &-data:not(:placeholder-shown) ~ &-tooltip {
+    transform: translate(-24px, -36px);
+    color: $secondary-color;
+    font-size: 12px;
+  }
+
+  &-tooltip,
+  &-icon {
+    position: absolute;
+    z-index: 2;
+}  
+}
+.comments {
+  
+  &-data {
+    width: 448px;
+    height: 120px;
+    padding: 10px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      outline: none;
+      border-color: $secondary-color;
+    }
+  }
+
+  &-data:focus ~ &-tooltip,
+  &-data:not(:placeholder-shown) ~ &-tooltip {
+    transform: translateY(-36px);
+    color: $secondary-color;
+    font-size: 12px;
+  }
+  
+  &-tooltip {
+    top: 12px;
+    left: 16px;
+      
+    position: absolute;
+    z-index: 2;
+
+    @include transition(transform, color, font-size);
+  }
+} 
+
+  .checkbox{
+    &-icon {
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+
+    background-image: url(../images/icon-checkbox-unchecked.svg);
+    background-origin: content-box;
+    background-position: center;
+  }
+  
+    &:checked ~ &-icon {
+    background-color: $secondary-color;
+    background-image: url(../images/icon-checkbox-checked.svg);
+  }
+}
+
+.license {
+  &-agreement {
+    @extend %flex-box;
+    margin-bottom: 30px;
+  }
+  
+  &-link {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
-    /* identical to box height, or 171% */
     text-decoration-line: underline;
   
     color: $secondary-color;
   }  
+  &-description {
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+  }
+} 
