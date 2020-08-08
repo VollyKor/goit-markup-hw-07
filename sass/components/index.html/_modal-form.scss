@@ -154,8 +154,8 @@
     background-image: url(../images/icon-checkbox-checked.svg);
   }
   &:focus:checked ~ &-icon {
-    outline: 2px solid $secondary-color;
-    outline-offset: 2px;
+    outline: 1px solid $secondary-color;
+    outline-offset: 1px;
   }
 }
 
