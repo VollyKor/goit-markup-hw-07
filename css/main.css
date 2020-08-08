@@ -902,8 +902,8 @@ svg {
 }
 
 .checkbox:focus ~ .checkbox-icon {
-  background-color: transparent;
-  background-image: url(../images/icon-checkbox-focus.svg);
+  outline: 2px solid #2196f3;
+  outline-offset: 1px;
 }
 
 .checkbox:checked ~ .checkbox-icon {
@@ -913,7 +913,7 @@ svg {
 
 .checkbox:focus:checked ~ .checkbox-icon {
   outline: 2px solid #2196f3;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .license-agreement {

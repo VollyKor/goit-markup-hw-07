@@ -146,15 +146,17 @@
     background-position: center;
   }
   &:focus ~ .checkbox-icon {
-    background-color: transparent;
-    background-image: url(../images/icon-checkbox-focus.svg);
+    // background-color: transparent;
+    // background-image: url(../images/icon-checkbox-focus.svg);
+    outline: 2px solid $secondary-color;
+    outline-offset: 1px;
   }
   &:checked ~ &-icon {
     background-color: $secondary-color;
     background-image: url(../images/icon-checkbox-checked.svg);
   }
   &:focus:checked ~ &-icon {
-    outline: 1px solid $secondary-color;
+    outline: 2px solid $secondary-color;
     outline-offset: 1px;
   }
 }
