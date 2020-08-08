@@ -1,3 +1,6 @@
+// 
+//  Section-hero
+
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -12,8 +15,9 @@
     url(../images/hero-background.jpg);
 
   text-align: center;
+}
 
-  &-title {
+.hero-title {
     margin-bottom: 30px;
 
     color: $primary-white-color;
@@ -25,7 +29,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
-}
+
 .button-order {
   padding: 10px 52px;
 

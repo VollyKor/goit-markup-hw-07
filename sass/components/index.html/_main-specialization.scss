@@ -1,4 +1,5 @@
-/* Features */
+// 
+/* Section  specialization */
 
 .specialization {
   @extend %container;
@@ -28,8 +29,11 @@
     font-size: 0px;
     display: block;
   }
+}
 
-  &-desc {
+// Description above card
+
+.specialization-desc {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -47,4 +51,4 @@
     color: $primary-white-color;
     background-color: $background-description-color;
   }
-}
+

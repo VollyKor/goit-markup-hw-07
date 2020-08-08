@@ -15,9 +15,7 @@
 // Компоненты
 
 // Header
-@import "./components/common/header-wrapper";
-@import "./components/common/header-nav";
-@import "./components/common/header-address";
+@import "./components/common/header";
 
 // Main
 @import "./components/index.html/main-hero";
@@ -27,12 +25,10 @@
 @import "./components/index.html/main-clients";
 
 // Footer
-@import "./components/common/footer-wrapper";
-@import "./components/common/footer-contacts";
-@import "./components/common/footer-socials";
+@import "./components/common/footer";
 @import "./components/common/footer-form-subscribe";
 
 // Modal
 @import "./components/index.html/modal";
 @import "./components/index.html/modal-form";
-@import "./components/index.html/modal_is-hidden";
+@import "./utils/modal_is-hidden";

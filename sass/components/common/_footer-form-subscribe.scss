@@ -1,8 +1,11 @@
+//
+// Subscribe form in footer
+
 .footer {
+
   .form {
     &-subtitle {
       display: block;
-
       @extend %footer-subtitle;
     }
 
@@ -24,36 +27,36 @@
       line-height: 1.25;
 
       @include transition(transform, color);
-    }
 
-    &-field {
-      width: 358px;
-      height: 50px;
-      margin-right: 12px;
-      padding-left: 16px;
-
-      border: 1px solid $form-border-color;
-      border-radius: 4px;
-      background-color: $secondary-background-color;
-
-      font-size: 16px;
-      line-height: 1.25;
-      color: $primary-background-color;
-      outline: transparent;
-
-      &:focus {
-        background-color: $primary-background-color;
-        color: $primary-black-color;
-      }
-
-      &:focus + .form-tooltip,
-      &:not(:placeholder-shown) + .form-tooltip {
+      &-field:focus + &-tooltip,
+      &-field:not(:placeholder-shown) + &-tooltip {
         transform: translateX(-70px);
         color: $primary-white-color;
       }
     }
   }
 
+  .form-field {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding-left: 16px;
+
+    border: 1px solid $form-border-color;
+    border-radius: 4px;
+    background-color: $secondary-background-color;
+
+    font-size: 16px;
+    line-height: 1.25;
+    color: $primary-background-color;
+    outline: transparent;
+
+    &:focus {
+      background-color: $primary-background-color;
+      color: $primary-black-color;
+    }
+  }
+  
   .subscribe-button {
     padding: 10px 29px;
 
@@ -67,21 +70,23 @@
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
+  }
 
-    & > span {
-      @extend %flex-box;
-      justify-content: center;
+  // button icon
 
-      &::after {
-        content: "";
-        display: block;
+  .subscribe-button > span {
+    @extend %flex-box;
+    justify-content: center;
 
-        background-image: url("../images/icon-send.svg");
-        fill: $primary-black-color;
-        width: 24px;
-        height: 24px;
-        margin-left: 10px;
-      }
+    &::after {
+      content: "";
+      display: block;
+
+      background-image: url("../images/icon-send.svg");
+      fill: $primary-black-color;
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
     }
   }
 }

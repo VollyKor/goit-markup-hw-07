@@ -1,15 +1,13 @@
+// 
+// Common form styles
 
 .flex-vertical {
-    @extend %flex-box;
-    flex-direction: column;
-  }
-  
+  @extend %flex-box;
+  flex-direction: column;
+}
+
 .form {
-  &-order {
-    margin-bottom: 40px;
-  }
-  
-  &-text {
+  &-title{
     display: block;
     text-align: center;
     margin-top: 40px;
@@ -21,6 +19,10 @@
     color: $primary-black-color;
   }
   
+  &-order {
+    margin-bottom: 40px;
+  }
+
   &-input {
     position: relative;
     margin-bottom: 28px;
@@ -30,25 +32,11 @@
     position: relative;
     margin-bottom: 20px;
   }
+}
 
-  &-send {
-    width: 200px;
-    height: 50px;
-    color: $primary-white-color;
-    background-color: $secondary-color;
-  
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    text-align: center;
-    letter-spacing: 0.06em;
-  
-    border: none;
-    border-radius: 4px;
-}
-}
-.input {
-  &-data {
+// Input name and email
+
+.input-data {
     display: block;
     width: 448px;
     height: 40px;
@@ -62,54 +50,64 @@
       border-color: $secondary-color;
     }
   }
-  
+
+ .input{
   &-tooltip {
     left: 42px;
     top: 50%;
     transform: translateY(-50%);
-  
+
     font-size: 14px;
     line-height: 1.07;
     color: $primary-grey-color;
-  
+
+    position: absolute;
+    z-index: 2; 
+
     @include transition(transform, color, font-size);
   }
-  
+
+    &-data:focus ~ &-tooltip,
+    &-data:not(:placeholder-shown) ~ &-tooltip {
+
+    transform: translate(-24px, -36px);
+    color: $secondary-color;
+    font-size: 12px;
+  }  
+}
+//  Input-icons
+
+.input {  
   &-icon {
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
   
-    width: 18px;
-    height: 18px;
-  
-    fill: $primary-black-color;
+  fill: $primary-black-color;
+
+  position: absolute;
+  z-index: 2;
   }
 
   &-data:focus ~ &-icon,
   &-data:not(:placeholder-shown) ~ &-icon {
     fill: $secondary-color;
   }
-
-  &-data:focus ~ &-icon {
-    fill: $secondary-color;
-  }
-
-  &-data:focus ~ &-tooltip,
-  &-data:not(:placeholder-shown) ~ &-tooltip {
-    transform: translate(-24px, -36px);
-    color: $secondary-color;
-    font-size: 12px;
-  }
-
-  &-tooltip,
-  &-icon {
-    position: absolute;
-    z-index: 2;
-}  
 }
+
+// Input comments
+
 .comments {
-  
+  &:focus,
+  &:not(:placeholder-shown) {
+    outline: none;
+    border-color: $secondary-color;
+  }
+
   &-data {
     width: 448px;
     height: 120px;
@@ -117,34 +115,23 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
-
-    &:focus,
-    &:not(:placeholder-shown) {
-      outline: none;
-      border-color: $secondary-color;
-    }
   }
 
-  &-data:focus ~ &-tooltip,
-  &-data:not(:placeholder-shown) ~ &-tooltip {
-    transform: translateY(-36px);
-    color: $secondary-color;
-    font-size: 12px;
-  }
-  
   &-tooltip {
     top: 12px;
     left: 16px;
-      
+
     position: absolute;
     z-index: 2;
 
     @include transition(transform, color, font-size);
   }
-} 
+}
 
-  .checkbox{
-    &-icon {
+// Checkbox
+
+.checkbox {
+  &-icon {
     margin-right: 8px;
     width: 16px;
     height: 15px;
@@ -154,8 +141,8 @@
     background-origin: content-box;
     background-position: center;
   }
-  
-    &:checked ~ &-icon {
+
+  &:checked ~ &-icon {
     background-color: $secondary-color;
     background-image: url(../images/icon-checkbox-checked.svg);
   }
@@ -166,17 +153,35 @@
     @extend %flex-box;
     margin-bottom: 30px;
   }
-  
+
   &-link {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     text-decoration-line: underline;
-  
+
     color: $secondary-color;
-  }  
+  }
   &-description {
     line-height: 1.15;
     letter-spacing: 0.01em;
   }
-} 
+}
+
+// send data button
+
+.form-send {
+  width: 200px;
+  height: 50px;
+  color: $primary-white-color;
+  background-color: $secondary-color;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  border: none;
+  border-radius: 4px;
+}

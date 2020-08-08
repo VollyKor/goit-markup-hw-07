@@ -332,6 +332,17 @@ svg {
   fill: #2196f3;
 }
 
+.gallery-selection {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.gallery-selection > li:not(:last-child) {
+  margin-right: 8px;
+}
+
 .gallery-button {
   padding: 6px 12px;
   border: 0px;
@@ -356,20 +367,20 @@ svg {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.gallery-selection {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
-}
-
-.gallery-selection > li:not(:last-child) {
-  margin-right: 8px;
-}
-
 .gallery-list {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.gallery-link {
+  display: block;
+  font-size: 0px;
+}
+
+.gallery-desc {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .gallery-item {
@@ -410,17 +421,6 @@ svg {
   color: #757575;
   font-size: 16px;
   line-height: 1.87;
-}
-
-.gallery-link {
-  display: block;
-  font-size: 0px;
-}
-
-.gallery-desc {
-  padding: 20px 24px;
-  border: 1px solid #eeeeee;
-  border-top: none;
 }
 
 .gallery-overlay {
@@ -549,6 +549,13 @@ svg {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer .form-tooltip-field:focus + .footer .form-tooltip-tooltip,
+.footer .form-tooltip-field:not(:placeholder-shown) + .footer .form-tooltip-tooltip {
+  -webkit-transform: translateX(-70px);
+          transform: translateX(-70px);
+  color: #ffffff;
+}
+
 .footer .form-field {
   width: 358px;
   height: 50px;
@@ -566,13 +573,6 @@ svg {
 .footer .form-field:focus {
   background-color: #f5f4fa;
   color: #212121;
-}
-
-.footer .form-field:focus + .form-tooltip,
-.footer .form-field:not(:placeholder-shown) + .form-tooltip {
-  -webkit-transform: translateX(-70px);
-          transform: translateX(-70px);
-  color: #ffffff;
 }
 
 .footer .subscribe-button {
