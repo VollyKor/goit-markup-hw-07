@@ -1,9 +1,7 @@
 //
 // Subscribe form in footer
 
-.footer {
-
-  .form {
+  .subscribe {
     &-subtitle {
       display: block;
       @extend %footer-subtitle;
@@ -16,27 +14,9 @@
     &-lebel {
       position: relative;
     }
-
-    &-tooltip {
-      position: absolute;
-      top: 15px;
-      left: 16px;
-
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 16px;
-      line-height: 1.25;
-
-      @include transition(transform, color);
-
-      &-field:focus + &-tooltip,
-      &-field:not(:placeholder-shown) + &-tooltip {
-        transform: translateX(-70px);
-        color: $primary-white-color;
-      }
-    }
   }
 
-  .form-field {
+  .subscribe-field {
     width: 358px;
     height: 50px;
     margin-right: 12px;
@@ -56,7 +36,31 @@
       color: $primary-black-color;
     }
   }
-  
+
+// Subscribe tooltip
+
+  .subscribe {
+    &-tooltip {
+      position: absolute;
+      top: 15px;
+      left: 16px;
+
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      line-height: 1.25;
+
+      @include transition(transform, color);
+    }
+
+      &-field:focus + &-tooltip,
+      &-field:not(:placeholder-shown) + &-tooltip {
+        transform: translateX(-70px);
+        color: $primary-white-color;
+      }      
+    }
+
+  // Subscribe button
+
   .subscribe-button {
     padding: 10px 29px;
 
@@ -70,15 +74,14 @@
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-  }
 
-  // button icon
-
-  .subscribe-button > span {
+    &-text {
     @extend %flex-box;
     justify-content: center;
+    
+    // button icon
 
-    &::after {
+      &::after {
       content: "";
       display: block;
 

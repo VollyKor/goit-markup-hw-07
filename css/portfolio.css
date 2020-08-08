@@ -126,7 +126,7 @@ summary {
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-.header, .header-nav, .nav-list, .header-address, .address-list, .address-item, .gallery, .gallery-selection, .gallery-list, .footer-wrapper, .footer-social-list, .footer .form-wrapper, .footer .subscribe-button > span {
+.header, .header-nav, .nav-list, .header-address, .address-list, .address-item, .gallery, .gallery-selection, .gallery-list, .footer-wrapper, .footer-social-list, .subscribe-wrapper, .subscribe-button-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,7 +156,7 @@ summary {
   height: 20px;
 }
 
-.footer-social-subtitle, .footer .form-subtitle {
+.footer-social-subtitle, .subscribe-subtitle {
   display: block;
   margin-bottom: 20px;
   color: #ffffff;
@@ -365,6 +365,7 @@ svg {
   background-color: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none;
 }
 
 .gallery-list {
@@ -375,6 +376,12 @@ svg {
 .gallery-link {
   display: block;
   font-size: 0px;
+}
+
+.gallery-link:hover, .gallery-link:focus {
+  outline: none;
+  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+          box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .gallery-desc {
@@ -393,11 +400,6 @@ svg {
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.gallery-item:hover, .gallery-item:focus {
-  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-          box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .gallery-item:nth-child(3n) {
@@ -450,8 +452,8 @@ svg {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery-item:hover .gallery-text,
-.gallery-item:focus .gallery-text {
+.gallery-link:hover .gallery-text,
+.gallery-link:focus .gallery-text {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
@@ -525,38 +527,18 @@ svg {
 
 .footer-social-link:hover, .footer-social-link:focus {
   background-color: #2196f3;
+  outline: none;
 }
 
-.footer .form-subtitle {
+.subscribe-subtitle {
   display: block;
 }
 
-.footer .form-lebel {
+.subscribe-lebel {
   position: relative;
 }
 
-.footer .form-tooltip {
-  position: absolute;
-  top: 15px;
-  left: 16px;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
-  line-height: 1.25;
-  -webkit-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer .form-tooltip-field:focus + .footer .form-tooltip-tooltip,
-.footer .form-tooltip-field:not(:placeholder-shown) + .footer .form-tooltip-tooltip {
-  -webkit-transform: translateX(-70px);
-          transform: translateX(-70px);
-  color: #ffffff;
-}
-
-.footer .form-field {
+.subscribe-field {
   width: 358px;
   height: 50px;
   margin-right: 12px;
@@ -570,12 +552,33 @@ svg {
   outline: transparent;
 }
 
-.footer .form-field:focus {
+.subscribe-field:focus {
   background-color: #f5f4fa;
   color: #212121;
 }
 
-.footer .subscribe-button {
+.subscribe-tooltip {
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+  -webkit-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-field:focus + .subscribe-tooltip,
+.subscribe-field:not(:placeholder-shown) + .subscribe-tooltip {
+  -webkit-transform: translateX(-70px);
+          transform: translateX(-70px);
+  color: #ffffff;
+}
+
+.subscribe-button {
   padding: 10px 29px;
   color: #ffffff;
   background-color: #2196f3;
@@ -587,13 +590,13 @@ svg {
   letter-spacing: 0.06em;
 }
 
-.footer .subscribe-button > span {
+.subscribe-button-text {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.footer .subscribe-button > span::after {
+.subscribe-button-text::after {
   content: "";
   display: block;
   background-image: url("../images/icon-send.svg");

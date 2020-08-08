@@ -1,4 +1,4 @@
-// 
+//
 // Common form styles
 
 .flex-vertical {
@@ -7,18 +7,18 @@
 }
 
 .form {
-  &-title{
+  &-title {
     display: block;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 28px;
-  
+
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     color: $primary-black-color;
   }
-  
+
   &-order {
     margin-bottom: 40px;
   }
@@ -37,21 +37,21 @@
 // Input name and email
 
 .input-data {
-    display: block;
-    width: 448px;
-    height: 40px;
-    padding-left: 42px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+  display: block;
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 
-    &:focus,
-    &:not(:placeholder-shown) {
-      outline: none;
-      border-color: $secondary-color;
-    }
+  &:focus,
+  &:not(:placeholder-shown) {
+    outline: none;
+    border-color: $secondary-color;
   }
+}
 
- .input{
+.input {
   &-tooltip {
     left: 42px;
     top: 50%;
@@ -62,35 +62,33 @@
     color: $primary-grey-color;
 
     position: absolute;
-    z-index: 2; 
+    z-index: 2;
 
     @include transition(transform, color, font-size);
   }
 
-    &-data:focus ~ &-tooltip,
-    &-data:not(:placeholder-shown) ~ &-tooltip {
-
+  &-data:focus ~ &-tooltip,
+  &-data:not(:placeholder-shown) ~ &-tooltip {
     transform: translate(-24px, -36px);
     color: $secondary-color;
     font-size: 12px;
-  }  
+  }
 }
 //  Input-icons
 
-.input {  
+.input {
   &-icon {
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
 
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
 
-  width: 18px;
-  height: 18px;
-  
-  fill: $primary-black-color;
+    fill: $primary-black-color;
 
-  position: absolute;
-  z-index: 2;
+    position: absolute;
+    z-index: 2;
   }
 
   &-data:focus ~ &-icon,
@@ -102,12 +100,6 @@
 // Input comments
 
 .comments {
-  &:focus,
-  &:not(:placeholder-shown) {
-    outline: none;
-    border-color: $secondary-color;
-  }
-
   &-data {
     width: 448px;
     height: 120px;
@@ -115,6 +107,11 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
+    &:focus,
+    &:not(:placeholder-shown) {
+      outline: none;
+      border-color: $secondary-color;
+    }
   }
 
   &-tooltip {
@@ -125,6 +122,13 @@
     z-index: 2;
 
     @include transition(transform, color, font-size);
+  }
+
+  &-data:focus ~ &-tooltip,
+  &-data:not(:placeholder-shown) ~ &-tooltip {
+    transform: translateY(-36px);
+    color: $secondary-color;
+    font-size: 12px;
   }
 }
 
@@ -141,10 +145,17 @@
     background-origin: content-box;
     background-position: center;
   }
-
+  &:focus ~ .checkbox-icon {
+    background-color: transparent;
+    background-image: url(../images/icon-checkbox-focus.svg);
+  }
   &:checked ~ &-icon {
     background-color: $secondary-color;
     background-image: url(../images/icon-checkbox-checked.svg);
+  }
+  &:focus:checked ~ &-icon {
+    outline: 2px solid $secondary-color;
+    outline-offset: 2px;
   }
 }
 

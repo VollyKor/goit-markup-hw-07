@@ -87,6 +87,7 @@
   &:focus {
     fill: $primary-white-color;
     background-color: $secondary-color;
+    outline: none; 
   }
 
   &:not(:last-child) {

@@ -467,22 +467,22 @@
 
         <!-- Форма подпишись -->
         <form class="form-subscribe">
-          <b class="form-subtitle">
+          <b class="subscribe-subtitle">
             Подпишитесь на рассылку
           </b>
-          <div class="form-wrapper">
-            <label class="form-lebel">
+          <div class="subscribe-wrapper">
+            <label class="subscribe-lebel">
               <input
-                class="form-field"
+                class="subscribe-field"
                 type="text"
                 name="subscribe"
                 placeholder=" "
                 autocomplete="email"
               />
-              <span class="form-tooltip">E-mail</span>
+              <span class="subscribe-tooltip">E-mail</span>
             </label>
             <button class="subscribe-button" type="button">
-              <span>Подписаться</span>
+              <span class="subscribe-button-text">Подписаться</span>
             </button>
           </div>
         </form>
@@ -507,7 +507,7 @@
               <input
                 class="input-data"
                 type="text"
-                name="order-data"
+                name="order-name"
                 placeholder=" "
               />
               <span class="input-tooltip">Имя</span>
@@ -519,8 +519,8 @@
             <label class="form-input">
               <input
                 class="input-data"
-                type="text"
-                name="order-data"
+                type="tel"
+                name="order-tel"
                 placeholder=" "
               />
               <span class="input-tooltip">Телефон</span>
@@ -532,8 +532,8 @@
             <label class="form-input">
               <input
                 class="input-data"
-                type="text"
-                name="order-data"
+                type="email"
+                name="order-email"
                 placeholder=" "
               />
               <span class="input-tooltip">Почта</span>
@@ -545,7 +545,7 @@
             <label class="form-comments">
               <textarea
                 class="comments-data"
-                name="order-data"
+                name="order-comments"
                 rows="10"
                 placeholder=" "
               ></textarea>
@@ -554,9 +554,10 @@
 
             <label class="license-agreement">
               <input
-                class="checkbox visually-hidden"
+                class="checkbox visually-hidden" 
+                value="true"
                 type="checkbox"
-                name="order-data"
+                name="license-agree"
               />
               <span class="checkbox-icon"></span>
 
@@ -565,7 +566,7 @@
                 <a class="license-link" href="">Условия договора </a>
               </span>
             </label>
-            <button class="form-send" type="button">Отправить</button>
+            <button action="#" class="form-send" type="submit">Отправить</button>
           </div>
         </form>
       </div>

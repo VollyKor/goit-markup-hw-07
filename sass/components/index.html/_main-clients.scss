@@ -37,6 +37,7 @@
     &:focus {
       fill: $secondary-color;
       border-color: $secondary-color;
+      outline: none     ;
     }
   }
 

@@ -90,5 +90,6 @@
     &:hover,
     &:focus {
       background-color: $secondary-color;
+      outline: none;
     }
   }
