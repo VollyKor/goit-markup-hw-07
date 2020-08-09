@@ -12,23 +12,48 @@
 @import "./utils/visually-hidden";
 @import "./utils/logo";
 
-// Компоненты
+// Common Sections
 
 // Header
-@import "./components/common/header";
+@import "./components/common/header-styles/header-wrapper";
+@import "./components/common/header-styles/header-nav";
+@import "./components/common/header-styles/header-address";
 
-// Main
+// Footer
+@import "./components/common/footer-styles/footer-wrapper";
+@import "./components/common/footer-styles/footer-contacts";
+@import "./components/common/footer-styles/footer-social-links";
+@import "./components/common/footer-styles/foooter-form-subscribe/form-subtitle";
+@import "./components/common/footer-styles/foooter-form-subscribe/form-field";
+@import "./components/common/footer-styles/foooter-form-subscribe/form-tooltip";
+@import "./components/common/footer-styles/foooter-form-subscribe/form-btn-send";
+
+
+
+// Index.html
 @import "./components/index.html/main-hero";
 @import "./components/index.html/main-features";
 @import "./components/index.html/main-specialization";
 @import "./components/index.html/main-team";
 @import "./components/index.html/main-clients";
 
-// Footer
-@import "./components/common/footer";
-@import "./components/common/footer-form-subscribe";
-
 // Modal
-@import "./components/index.html/modal";
-@import "./components/index.html/modal-form";
+@import "./components/index.html/modal-window/modal-backdrop";
+@import "./components/index.html/modal-window/modal-close-btn";
 @import "./utils/modal_is-hidden";
+
+// Modal form
+@import "./components/index.html/modal-window/modal-form/form-common";
+@import "./components/index.html/modal-window/modal-form/input-data";
+@import "./components/index.html/modal-window/modal-form/input-tooltip";
+@import "./components/index.html/modal-window/modal-form/input-checkbox";
+@import "./components/index.html/modal-window/modal-form/send-btn";
+
+
+// Portfolio.html
+
+// Main-Gallery
+@import "./components/portfolio.html/gallery-wrapper";
+@import "./components/portfolio.html/gallery-buttons";
+@import "./components/portfolio.html/gallery-cards";
+@import "./components/portfolio.html/gallery-cards-overlay";
